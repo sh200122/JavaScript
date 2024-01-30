@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //1.定义数组
+    let arr = [1, 4, 24, 5, 7, 22, 34, 5, 9]
+    //2.定义新数组，存放筛选的元素
+    let newArr = []
+    //3.遍历旧数组，找出要筛选的元素
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] > 10) {
+        //4.依次追加给新数组
+        newArr.push(arr[i])
+      }
+    }
+    alert(newArr)
+  </script>
+</body>
+
+</html>
