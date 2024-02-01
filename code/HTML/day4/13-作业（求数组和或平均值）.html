@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //封装函数
+    function handleData(arr = [], x) {
+      //定义变量
+      let sum = 0
+      let avr = 0
+      //判断
+      if (x === true || x == null) {
+        for (let i = 0; i < arr.length; i++) {
+          sum += arr[i]
+        }
+        alert(`和为：${sum}`)
+      }
+      if (x === false) {
+        for (let i = 0; i < arr.length; i++) {
+          sum += arr[i]
+          avr = sum / arr.length
+        }
+        alert(`平均值为：${avr}`)
+      }
+    }
+    //调用
+    handleData([1, 2, 3, 4, 5], false)
+
+  </script>
+</body>
+
+</html>

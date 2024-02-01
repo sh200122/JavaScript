@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //函数封装
+    function getArrSum(arr = []) {
+      //计算
+      let sum = 0;
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+      }
+      alert(sum)
+    }
+    //调用
+    getArrSum([6, 7, 8, 9])
+  </script>
+</body>
+
+</html>

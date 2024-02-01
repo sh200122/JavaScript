@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //获取用户输入
+    let second = +prompt('请输入秒数：')
+    //封装函数
+    function getTime(t) {
+      //数据转换
+      // 小时：  h = parseInt(总秒数 / 60 / 60 % 24)
+      // 分钟：  m = parseInt(总秒数 / 60 % 60)
+      // 秒数:  s = parseInt(总秒数 % 60) 
+      let h = parseInt(t / 60 / 60 % 24)
+      let m = parseInt(t / 60 % 60)
+      let s = parseInt(t % 60)
+      h = h < 10 ? '0' + h : h
+      m = m < 10 ? '0' + m : m
+      s = s < 10 ? '0' + s : s
+      return `${t}秒等于${h}小时${m}分钟${s}秒`
+    }
+    //调用
+    let time = getTime(second)
+    document.write(time)
+  </script>
+</body>
+
+</html>

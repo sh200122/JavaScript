@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 封装函数返回元素的下标  [1, 5, 10, 22, 8, 7]
+    // 1. 封装函数 findIndex，传递2个参数 元素、数组
+    function findIndex(ele, arr = []) {
+      // 里面写业务逻辑
+      for (let i = 0; i < arr.length; i++) {
+        if (ele === arr[i]) {
+          return i
+          break
+        }
+      }
+      return -1
+    }
+    let index1 = findIndex(10, [1, 5, 10, 22, 8, 7])
+    console.log(index1) // 2
+    let index2 = findIndex(8, [1, 5, 10, 22, 8, 7])
+    console.log(index2) // 4
+    let index3 = findIndex(88, [1, 5, 10, 22, 8, 7])
+    console.log(index3) // -1
+  </script>
+</body>
+
+</html>
