@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //定义
+    let phone = {
+      goods: 'mi',
+      name: '小米10',
+      num: '11000120938',
+      weight: '0.55kg',
+      address: '中国'
+    }
+    //查
+    //方式一
+    console.log(phone.name)
+    //方式二
+    console.log(phone['name'])
+    //改
+    phone.num = '22222'
+    console.log(phone.num)
+    //增
+    phone.hert = '骁龙888'
+    console.log(phone.hert)
+    //删
+    delete phone.weight
+  </script>
+</body>
+
+</html>

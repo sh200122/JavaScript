@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  div {
+    height: 100px;
+    width: 100px;
+  }
+</style>
+
+<body>
+  <div></div>
+  <script>
+    //生成随机颜色
+    function getRandomColor() {
+      //#rgb
+      let r = Math.floor(Math.random() * 256)
+      let g = Math.floor(Math.random() * 256)
+      let b = Math.floor(Math.random() * 256)
+      return `rgb(${r},${g},${b})`
+    }
+    let div = document.querySelector('div')
+    div.style.backgroundColor = getRandomColor()
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //生成随机数
+    function getRandom(n, m) {
+      return Math.floor(Math.random() * (m - n + 1)) + n
+    }
+    //调用
+    let random = getRandom(1, 10)
+    //alert(random)
+    let flag = false
+    //猜8次
+    for (let i = 1; i <= 8; i++) {
+      //获取用户输入
+      let num = +prompt('请输入你猜的数字（1-10）：')
+      //判断
+      if (num > random) {
+        alert('猜大了')
+      } else if (num < random) {
+        alert('猜小了')
+      } else {
+        alert('猜对了')
+        flag = true
+        break
+      }
+    }
+    if (flag === false) {
+      alert('次数用完了')
+    }
+  </script>
+
+</body>
+
+</html>

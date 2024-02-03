@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 600px;
+            text-align: center;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        tr {
+            height: 40px;
+            cursor: pointer;
+        }
+
+        table tr:nth-child(1) {
+            background-color: #ddd;
+        }
+
+        table tr:not(:first-child):hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>学生信息</h2>
+    <p>将数据渲染到页面中...</p>
+
+    <table>
+        <caption>学生列表</caption>
+        <tr>
+            <th>姓名</th>
+            <th>编号</th>
+            <th>家乡</th>
+        </tr>
+        <!-- JS渲染 -->
+        <script>
+            //数据准备
+            let student = [
+                { name: '小明', id: '123', home: '大理' },
+                { name: '小红', id: '234', home: '重庆' },
+                { name: '小华', id: '345', home: '成都' },
+                { name: '小丽', id: '456', home: '贵州' }
+            ]
+            //渲染
+            for (let i = 0; i < student.length; i++) {
+                document.write(`
+            <tr>
+                <td>${student[i].name}</td>
+                <td>${student[i].id}</td>
+                <td>${student[i].home}</td>
+            </tr>
+            `)
+            }
+        </script>
+    </table>
+
+
+</body>
+
+</html>
