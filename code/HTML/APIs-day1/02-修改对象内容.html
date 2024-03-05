@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="box">
+    我是帅哥！
+  </div>
+  <script>
+    //1.获取对象元素
+    const box = document.querySelector('.box')
+    //2.修改对象内容 只修改内容innerText(不会识别标签)
+    box.innerText = '我是美女！'
+    //3.修改对象内容 修改内容而且能识别标签innerHTML
+    box.innerHTML = '<b>我是美女！</b>'
+  </script>
+</body>
+
+</html>
