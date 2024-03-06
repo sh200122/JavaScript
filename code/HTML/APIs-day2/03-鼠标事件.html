@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sh">
+
+  </div>
+  <script>
+    //1.获取
+    const sh = document.querySelector('.sh')
+    //2.注册事件
+    sh.addEventListener('mouseenter', function () {
+      alert('hello!')
+    })
+    sh.addEventListener('mouseleave', function () {
+      alert('byebye!')
+    })
+  </script>
+</body>
+
+</html>

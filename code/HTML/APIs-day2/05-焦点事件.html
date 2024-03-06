@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text">
+  <script>
+    //1.获取
+    const input = document.querySelector('input')
+    //2.注册事件
+    input.addEventListener('focus', function () {
+      console.log('有焦点触发')
+    })
+    input.addEventListener('blur', function () {
+      console.log('没有焦点触发')
+    })
+  </script>
+</body>
+
+</html>
