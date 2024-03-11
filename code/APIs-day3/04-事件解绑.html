@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>按钮</button>
+  <script>
+    const btn = document.querySelector('button')
+    // btn.onclick = function () {
+    //   alert('点击')
+    //   //L0事件解除绑定
+    //   btn.onclick = null
+    // }
+    function fn() {
+      alert('点击')
+    }
+    btn.addEventListener('click', fn)
+    btn.removeEventListener('click', fn)
+  </script>
+</body>
+
+</html>

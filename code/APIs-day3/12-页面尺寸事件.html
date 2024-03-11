@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      /* 行内块 */
+      display: inline-block;
+      /* width: 200px; */
+      height: 200px;
+      background-color: red;
+      border: 20px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <div>1234567123456781234567890123456789</div>
+  <script>
+    const div = document.querySelector('div')
+    //不包含边框
+    console.log(div.clientWidth);
+    //resize浏览器窗口大小发生变化的时候触发的事件
+    window.addEventListener('resize', function () {
+      console.log(1);
+    })
+  </script>
+</body>
+
+</html>

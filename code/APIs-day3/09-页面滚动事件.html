@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 3000px;
+    }
+
+    div {
+      margin: 0px auto;
+      display: none;
+      overflow: scroll;
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    我里面有很多的文字
+    我里面有很多的文字
+    我里面有很多的文字
+    我里面有很多的文字
+    我里面有很多的文字
+    我里面有很多的文字
+    我里面有很多的文字
+    我里面有很多的文字
+    我里面有很多的文字
+    我里面有很多的文字
+    我里面有很多的文字
+    我里面有很多的文字
+    我里面有很多的文字
+    我里面有很多的文字
+    我里面有很多的文字
+    我里面有很多的文字
+    我里面有很多的文字
+    我里面有很多的文字
+    我里面有很多的文字
+  </div>
+  <script>
+    const div = document.querySelector('div')
+    window.addEventListener('scroll', function () {
+      //console.log('我滚了');
+      //想知道页面到底滚动了多少
+      //获取html元素写法
+      //document.documentElement
+      const n = document.documentElement.scrollTop
+      //页面拖动100像素后显示
+      if (n >= 100) {
+        div.style.display = 'block'
+      } else {
+        div.style.display = 'none'
+      }
+
+    })
+    // //获取
+    // const div = document.querySelector('div')
+    // //注册滚动事件
+    // div.addEventListener('scroll', function () {
+    //   //console.log('aaaa')
+    //   //scrollTop 被卷去的头部
+    //   console.log(div.scrollTop);
+    //})
+  </script>
+</body>
+
+</html>

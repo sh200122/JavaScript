@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      position: relative;
+      margin: 100px;
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+    }
+
+    p {
+      margin: 50px;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p></p>
+  </div>
+  <script>
+    const div = document.querySelector('div')
+    const p = document.querySelector('p')
+    console.log(div.offsetLeft)
+    //和最近一级带有定位到祖先元素有关
+    console.log(p.offsetLeft);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    height: 3000px;
+  }
+</style>
+
+<body>
+  <script>
+    //scroll可读写 数字型 不带单位
+    document.documentElement.scrollTop = 800
+    window.addEventListener('scroll', function () {
+      //scrollTop必须写到函数里面，写在外面不生效
+      const n = document.documentElement.scrollTop
+      //console.log(n);
+    })
+  </script>
+</body>
+
+</html>
