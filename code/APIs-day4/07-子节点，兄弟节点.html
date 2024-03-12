@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li><a>3</a></li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+  </div>
+  <script>
+    //子节点只能找亲儿子
+    const ul = document.querySelector('ul')
+    //只包含元素子节点(li)
+    console.log(ul.children)
+    //包含元素所有节点(li text)
+    console.log(ul.childNodes)
+    //兄弟节点
+    const li = document.querySelector('ul li:nth-child(3)')
+    console.log(li.previousElementSibling);
+    console.log(li.nextElementSibling);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td width="60">序号</td>
+      <td>课程名</td>
+      <td>难度</td>
+      <td width="80">操作</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td><span>HTML</span></td>
+      <td>初级</td>
+      <td><button>变色</button></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><span>CSS</span></td>
+      <td>初级</td>
+      <td><button>变色</button></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><span>Web APIs</span></td>
+      <td>中级</td>
+      <td><button>变色</button></td>
+    </tr>
+  </table>
+  <script>
+    // 获取所有 button 节点，并添加事件监听
+    const buttons = document.querySelectorAll('table button')
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function () {
+        // console.log(this.parentNode); // 父节点 td
+        // console.log(this.parentNode.parentNode); // 爷爷节点 tr
+        this.parentNode.parentNode.style.color = 'red'
+      })
+    }
+  </script>
+</body>
+
+</html>

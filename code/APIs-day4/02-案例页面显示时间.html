@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  div {
+    width: 400px;
+    height: 50px;
+    border: 1px solid black;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+  }
+</style>
+
+<body>
+  <div></div>
+  <script>
+    //获取元素
+    const div = document.querySelector('div')
+    // function getTime() {
+    //   //获取当前时间
+    //   const date = new Date()
+    //   let y = date.getFullYear()
+    //   let m = date.getMonth()
+    //   let d = date.getDate()
+    //   let h = date.getHours()
+    //   let mi = date.getMinutes()
+    //   let s = date.getSeconds()
+    //   h = h < 10 ? '0' + h : h
+    //   mi = mi < 10 ? '0' + mi : mi
+    //   s = s < 10 ? '0' + s : s
+    //   return `当前时间：${y}-${m}-${d} ${h}:${mi}:${s}`
+    // }
+    // div.innerHTML = getTime()
+    // //定时器
+    // setInterval(function () {
+    //   div.innerHTML = getTime()
+    // }, 1000)
+    //快速方法
+    function getTime() {
+      const date = new Date()
+      return date.toLocaleString()
+    }
+    div.innerHTML = getTime()
+    //定时器
+    setInterval(function () {
+      div.innerHTML = getTime()
+    }, 1000)
+  </script>
+</body>
+
+</html>
