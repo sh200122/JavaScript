@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="">
+    <input type="text" name="username">
+    <input type="text" name="pwd">
+  </form>
+  <a href="#/my">我的</a>
+  <a href="#/friend">关注</a>
+  <a href="#/history">历史记录</a>
+  <button>按钮</button>
+
+  <script>
+    // 页面跳转
+    //location.href = 'www.baidu.com'
+    //location.hash:获取#后面的值
+    //location.search：获取input里面的属性值
+    const btn = document.querySelector('button')
+    btn.addEventListener('click', function () {
+      //刷新页面
+      // location.reload()
+      //强制刷新
+      // location.reload(true)
+    })
+  </script>
+</body>
+
+</html>

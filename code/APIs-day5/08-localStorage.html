@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //1.存储一个名字
+    localStorage.setItem('uname', '石浩')
+    //2.获取方式
+    console.log(localStorage.getItem('uname'));
+    //3.修改方式
+    localStorage.setItem('uname', '大石')
+    //4.删除
+    localStorage.removeItem('uname')
+    //存年龄
+    localStorage.setItem('age', 18)
+    //得到的年龄为字符串类型
+    console.log(localStorage.getItem('age'));
+  </script>
+</body>
+
+</html>

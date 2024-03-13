@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <a href="www.baidu.com">支付成功<span>5</span>秒钟后跳转</a>
+  <script>
+    //1.获取元素
+    const a = document.querySelector('a')
+    //2.开启定时
+    //计数
+    let sum = 5
+    let sh = setInterval(function () {
+      sum--
+      a.innerHTML = `支付成功<span>${sum}</span>秒钟后跳转`
+      if (sum === 0) {
+        // 关闭计时器
+        clearInterval(sh)
+        //跳转
+        location.href = 'www.baidu.com'
+      }
+    }, 1000)
+
+  </script>
+</body>
+
+</html>
