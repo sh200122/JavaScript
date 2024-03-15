@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <textarea name="" id="" cols="30" rows="10"></textarea>
+  <button>按钮</button>
+  <div></div>
+  <script>
+    //获取
+    const tx = document.querySelector('textarea')
+    const btn = tx.nextElementSibling
+    const div = btn.nextElementSibling
+    //注册事件
+    btn.addEventListener('click', function () {
+      //验证
+      //console.log(tx.value);
+      //必须加上g
+      div.innerHTML = tx.value.replace(/石浩|shihao/g, '**')
+      //重置
+      tx.value = ''
+    })
+  </script>
+</body>
+
+</html>
