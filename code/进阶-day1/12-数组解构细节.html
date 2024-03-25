@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //练习
+    // const [he, lx, xm, fz] = ['海尔', '联想', '小米', '方正']
+    // console.log(he);
+
+    // function getValue() {
+    //   return [100, 60]
+    // }
+    // const [max, min] = getValue()
+    // console.log(max, min)
+    //1.变量多，单元值少，undefined
+    // const [a, b, c, d] = [1, 2, 3]
+    // console.log(a, b, c, d);
+    //2.变量少，单元值多
+    // const [a, b] = [1, 2, 3]
+    // console.log(a, b);
+    //解决方法(剩余参数)
+    // const [a,b,...c]=[1,2,3,4]
+    //   console.log(a,b);
+    //   console.log(c);//数组
+    //3.防止传入undefined 赋默认值
+    // const [a=0, b=0, c=0, d=0] = [1, 2, 3]
+    //  console.log(a, b, c, d);
+    // 4.按需导入赋值
+    // const [a,b,,d]=[1,2,3,4]
+    // console.log(a,b,d);
+
+    //多维数组
+    // const arr = [1, 2, [3, 4]]
+    // console.log(arr[0]);
+    // console.log(arr[1]);
+    // console.log(arr[2][0]);
+    // console.log(arr[2][1]);
+    //多维数组解构
+    // const arr=[1,2,[3,4]]
+    // const [a,b,c]=[1,2,[3,4]]
+    // console.log(a);
+    // console.log(b);
+    // console.log(c);//数组
+
+    const [a, b, [c, d]] = [1, 2, [3, 4]]
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(d);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //以前this的指向：谁调用这个函数，this就只向谁
+    // console.log(this);//window
+    //普通函数
+    // function fn(){
+    //   console.log(this);//window
+    // }
+    // window.fn()
+    //对象里的this
+    // const obj={
+    //   name:'andy',
+    //   sayHey:function(){
+    //     console.log(this);
+    //   }
+    // }
+    // obj.sayHey()
+    //箭头函数里的this
+    // const obj={
+    //   uname:'石浩',
+    //   sayHi:()=>{
+    //     console.log(this);
+    //   }
+    // }
+    // obj.sayHi()
+    const obj = {
+      uname: 'dashi',
+      sayHi: function () {
+        let i = 10
+        const count = () => {
+          console.log(this);
+        }
+        count()
+      }
+    }
+    obj.sayHi()
+
+  </script>
+
+</body>
+
+</html>
