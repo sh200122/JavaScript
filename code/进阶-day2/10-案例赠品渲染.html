@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div></div>
+  <script>
+    const gift = '茶叶,清洗球'
+    //1.把字符串转换为数组
+    // console.log(str.split(','));
+    //2.根据数组个数 ，生成对应的span标签
+    //const str = gift.split(',').map(function (element) {
+    //  return `<span>【赠品】${element}</span><br>`
+    //}).join('')
+    //3.再转换为字符串
+    // str.join('')//不能写在这里，会有','生成
+    //document.querySelector('div').innerHTML = str
+    document.querySelector('div').innerHTML = gift.split(',').map(element => `<span>【赠品】${element}</span><br>`).join('')
+  </script>
+</body>
+
+</html>

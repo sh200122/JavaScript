@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 步骤
+    // 1.创建新对象
+    // 2.构造函数this指向新对象
+    // 3.执行构造函数代码，修改他this，添加新属性
+    // 4.返回新对象
+
+    // 创建一个对象
+    // function Pig(uname, age) {
+    //   this.uname = uname
+    //   this.age = age
+    // }
+    // const pig = new Pig('佩奇', 18)
+    // console.log(pig);
+
+
+    //创建多个
+    function Goods(name, price, count) {
+      this.name = name
+      this.price = price
+      this.count = count
+    }
+    //实例化
+    const mi = new Goods('小米', 2000, 20)
+    console.log(mi);
+    const hw = new Goods('华为', 2990, 30)
+    console.log(hw);
+    const pg = new Goods('苹果', 4000, 10)
+    console.log(pg);
+  </script>
+</body>
+
+</html>

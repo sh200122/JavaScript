@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    // const arr = ['red', 'blue', 'green']
+    // const re = arr.find(item => item === 'blue')
+    // console.log(re);
+    const goods = [
+      {
+        name: '小米',
+        price: 1999
+      }, {
+        name: '华为',
+        price: 2999
+      }
+    ]
+    //1.find方法 查找小米
+    const mi = goods.find(item => item.name === '小米')
+    console.log(mi);
+    //2.every方法 每一个是否都符合条件，都符合为true，有一个不符合为false
+    //3.some方法只要有一个符合就饭返回true
+    const arr = [10, 20, 30]
+    const flag = arr.every(item => item >= 20)
+    console.log(flag);
+  </script>
+</body>
+
+</html>

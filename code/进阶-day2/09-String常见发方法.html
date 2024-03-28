@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //1.split方法 把字符串转换为数组 和join相反
+    // const str = '好好睡觉,好好吃饭,天天开心'
+    // const arr = str.split(',')
+    // console.log(arr);
+    // const str = '2024-3-21'
+    // const arr = str.split('-')
+    // console.log(arr);
+    //2.substring(开始的索引号[,结束的索引号]) 字符串截取
+    //省略结束的索引号，默认取到最后
+    //结束的索引号不包含想要截取的部分
+    // const str = '好好睡觉好好吃饭天天开心'
+    // console.log(str.substring(4, 8));
+    // 3.startWith 判断是不是以某个字符开头
+    // const str = '好好睡觉好好吃饭天天开心'
+    // console.log(str.startsWith('好'));
+    // 4.includes 判断某个字符串是否包含在一个字符串里
+    const str = '好好睡觉好好吃饭天天开心'
+    console.log(str.includes('天天开心'));
+    console.log(str.includes('天天开心', 9));
+  </script>
+</body>
+
+</html>
