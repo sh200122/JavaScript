@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // 抽取公共的部分放到原型上
+      // const Person1 = {
+      //   eyes: 2,
+      //   hands: 2
+      // }
+      // const Person2 = {
+      //   eyes: 2,
+      //   hands: 2
+      // }
+      //再抽取
+      function Person() {
+        this.eyes = 2
+        this.hands = 2
+      }
+      //女人构造函数 继承 Person
+      function Woman() {
+
+      }
+      //Woman通过原型来继承Person
+      // Woman.prototype = Person1
+      Woman.prototype = new Person()
+      //指回原来的构造函数
+      Woman.prototype.constructor = Woman
+      Woman.prototype.baby = function () {
+        console.log('孩子');
+      }
+      const red = new Woman()
+      console.log(red);
+      // console.log(Woman.prototype);
+      //男人的构造函数 继承Person
+      function Man() {
+
+      }
+      //通过原型对象来继承
+      // Man.prototype = Person2
+      Man.prototype = new Person()
+      Man.prototype.constructor = Man
+      const blue = new Man()
+      console.log(blue);
+      // console.log(Man.prototype);
+    </script>
+  </body>
+
+  </html>
+</body>
+
+</html>

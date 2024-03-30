@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 构造函数 公共的属性和方法 封装到构造函数里
+    //1.共公的属性写到构造函数里面
+    function Star(uname, age) {
+      this.uname = uname
+      this.age = age
+      // this.sing = function () {
+      //   console.log('唱歌');
+      // }
+    }
+    // 2.公共的方法写到原型对象里
+    Star.prototype.sing = function () {
+      console.log('唱歌');
+    }
+    const ldh = new Star('刘德华', 18)
+    const zxy = new Star('张学友', 18)
+    console.log(ldh);
+    ldh.sing()
+    zxy.sing()
+    console.log(ldh.sing === zxy.sing);
+    // 3.构造函数和原型对象中的this都指向实例化的对象
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 自己定义的方法，任何一个数组实例对象都可以使用
+    // 自定义的方法写到 数组.prototype身上
+    // 1.求最大值
+    Array.prototype.max = function () {
+      //展开运算符
+      return Math.max(...this)
+    }
+    console.log([1, 2, 3].max());
+    //2.求和
+    Array.prototype.sum = function () {
+      //展开运算符
+      return this.reduce((prev, elem) => prev + elem, 0)
+    }
+    console.log([1, 2, 3].sum());
+  </script>
+</body>
+
+</html>
