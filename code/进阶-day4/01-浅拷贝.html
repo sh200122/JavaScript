@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const Obj = {
+      uname: 'blue',
+      age: 18,
+      family: {
+        baby: '小blue'
+      }
+    }
+    //浅拷贝 只能拷贝 浅层的属性，uname和age，不能拷贝family
+    // const o = { ...Obj }
+    // console.log(o);
+    // o.age = 20
+    // console.log(o);
+    // console.log(Obj);
+    const o = {}
+    Object.assign(o, Obj)
+    o.age = 20
+    o.family.baby = '老blue'
+    console.log(o);
+    console.log(Obj);
+  </script>
+</body>
+
+</html>

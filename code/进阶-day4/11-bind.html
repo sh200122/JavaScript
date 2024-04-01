@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>按钮</button>
+  <script>
+    const obj = {
+      uname: 'pink'
+    }
+    function fn() {
+      console.log(this);//window
+    }
+    //bind 不会调用函数
+    //能改变this指向
+    //返回值是一个函数，但是这个函数里面的this指向的是obj
+    const fun = fn.bind(obj)
+    fun()
+
+    //需求，按钮禁用
+    const btn = document.querySelector('button')
+    btn.addEventListener('click', function () {
+      //禁用按钮
+      this.disabled = true
+      setTimeout(function () {
+        //在这个普通函数里面，我们要this由原来的window改为btn
+        this.disabled = false
+      }.bind(this), 2000);
+    })
+  </script>
+</body>
+
+</html>

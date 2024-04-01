@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>123</p>
+  <script>
+    function fn() {
+      try {
+        //可能 发生错误的代码要写到try
+        const p = document.querySelector('.p')
+        p.style.color = 'red'
+      } catch (err) {
+        //拦截错误信息，提示浏览器提供的错误信息，但是不中断执行
+        console.log(err.message);
+        //如果需要中断程序，就需要加return
+        //return
+        throw new Error('你看看选择器错误了吧')
+      }
+      finally {
+        //不管程序对不对，一定会执行的代码
+        alert('111111')
+      }
+      console.log(111);
+    }
+    fn()
+  </script>
+</body>
+
+</html>

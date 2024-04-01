@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const obj = {
+      uname: 'shihao'
+    }
+    function fn(x, y) {
+      console.log(this);
+      console.log(x + y);
+    }
+    //调用函数
+    //改变this指向
+    // fn.apply(this指向谁,数组参数)
+    fn.apply(obj, [1, 2])
+    // 返回值，本身就是在调用函数，所以返回值就是函数的返回值
+    // 使用场景，求数组最值
+    const arr = [11, 44, 33]
+    const max = Math.max.apply(Math, arr)
+    const min = Math.min.apply(Math, arr)
+    console.log(max, min);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .box {
+      width: 500px;
+      height: 500px;
+      background-color: #ccc;
+      color: #fff;
+      text-align: center;
+      font-size: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <script src="./lodash.min.js"></script>
+  <script>
+    const box = document.querySelector('.box')
+    let i = 1
+    function mouseMove() {
+      box.innerHTML = i++
+    }
+    //box.addEventListener('mousemove', mouseMove)
+    //利用lodash库实现防抖,500毫秒之后+1
+    // _.debounce(fun,时间)
+    //box.addEventListener('mousemove', _.debounce(mouseMove, 500))
+
+
+    //手写防抖函数
+    //核心是使用setTimeout定时器来实现
+    //1.声明定时器变量
+    //2.每次鼠标移动（事件触发）的时候都要先判断是否有定时器，如果有就先清除以前的定时器
+    //3.如果没有定时器，则开启定时器，存入到定时器变量里面
+    //4.定时器里面写函数调用
+    function debounce(fn, time) {
+      let timer
+      //return返回一个匿名函数
+      return function () {
+        //2,3,4
+        if (timer) clearTimeout(timer)
+        timer = setTimeout(function () {
+          fn()//调用fn函数
+        }, time)
+      }
+    }
+    //debounce(mouseMove, 500)=function(){2,3,4},每次调用都要返回值
+    box.addEventListener('mousemove', debounce(mouseMove, 500))
+  </script>
+</body>
+
+</html>
